@@ -11,3 +11,22 @@
   <p></p>
   <button type="submit" [disabled]="!myFormGroup.valid">Submit</button>
 </form>
+
+
+<!--FORM ARRAY-->
+
+<br>
+<h1>FORM ARRAY</h1>
+<br>
+<button [disabled]="!myFormGroupWithArray.valid" (click)="addControl()">MooOOoreEe</button>
+<form [formGroup]="myFormGroupWithArray" (ngSubmit)="submitArray()">
+  <div formArrayName="myArray">
+    <div *ngFor="let control of getArray().controls; let i = index">
+      <p>{{i + 1}}</p> <input type="text" [formControlName]="i">
+      <button (click)="removeControl(i)">Remove</button>
+    </div>
+  </div>
+  <p></p>
+  <button [disabled]="!myFormGroupWithArray.valid">Valider</button>
+</form>
+<br>
