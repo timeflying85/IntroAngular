@@ -1,0 +1,6 @@
+<p>input-output works!</p>
+
+<p>Message recu de la part de l'enfant : {{messageEnfant}}</p>
+
+<app-enfant [valeurEnfant]="valeurParent" (monEvent)="affectValeur($event)"></app-enfant>
+

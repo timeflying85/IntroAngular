@@ -1,0 +1,27 @@
+<!-- Ma Versions
+<fieldset>
+  <h2>Ajouter article</h2>
+  <app-children (addArticle)="addArticle($event)"  [listShopping]="listShopping" (deleteArticle)="deleteArticle($event)"></app-children>
+</fieldset>
+<p></p>
+
+<h2>Liste des articles</h2>
+<app-children [listShopping]="listShopping" (deleteArticle)="deleteArticle($event)"></app-children>
+-->
+
+<br>
+<p></p>
+<fieldset>
+  <legend>Add Article(s)</legend>
+  <p></p>
+  <label>Nom</label>
+  <input type="text" [(ngModel)]="name"> &nbsp;
+  <label>Quantité</label>
+  <input type="number" [(ngModel)]="quantity"> &nbsp;
+  <button (click)="addItem()" [disabled]="quantity == undefined || name == ''">Add Item</button>
+
+
+  <app-children></app-children>
+
+</fieldset>
+

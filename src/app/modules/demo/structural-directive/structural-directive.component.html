@@ -1,0 +1,68 @@
+<h4>NG IF</h4>
+
+<button (click)="setDisplay()">ON/OFF</button>
+
+<p *ngIf="display">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis officia voluptate enim minus facere et, aliquid incidunt voluptatibus debitis laudantium. Dolorum voluptate illum nostrum velit odio porro excepturi, voluptas omnis.</p>
+
+<br>
+
+<h4>NG FOR</h4>
+
+<ul>
+  <div *ngFor="let user of users">
+    <li *ngIf="user.age > 20">
+      <p>{{user.name}} - {{user.age}}</p>
+    </li>
+</div>
+</ul>
+
+<br>
+
+<h4>NG SWITCH</h4>
+
+<select [(ngModel)]="selector">
+  <option value="0">Null</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+</select>
+
+<div [ngSwitch]="selector">
+  <p *ngSwitchCase="1">Vous avez sélectionné le numéro 1</p>
+  <p *ngSwitchCase="2">Vous avez sélectionné le numéro 2</p>
+  <p *ngSwitchCase="3">Vous avez sélectionné le numéro 3</p>
+  <p *ngSwitchCase="4">Vous avez sélectionné le numéro 4</p>
+  <p *ngSwitchDefault>Vous n'avez rien selectionné</p>
+</div>
+
+<br>
+
+<h2>Add User</h2>
+
+<form>
+  <label>
+    Name:
+
+  </label>
+ <input type="text" [(ngModel)]="newUserName" [ngModelOptions]="{standalone: true}">
+  <label>
+    Age:
+
+  </label>
+<input type="number" [(ngModel)]="newUserAge" [ngModelOptions]="{standalone: true}">
+  <button type="button" (click)="addNewUser()">Add User</button>
+</form>
+
+<br>
+
+<h2>User List</h2>
+
+<ul>
+  <li *ngFor="let user of users; trackBy: trackByIndex; let i = index">
+    {{ user.name }}, {{ user.age }}
+    <button type="button" (click)="deleteUser(i)">Delete</button>
+  </li>
+</ul>
+
+

@@ -1,0 +1,41 @@
+
+button, input {
+  outline: none;
+  text-decoration: none;
+  background-position: center;
+  font-size: large;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: rgb(22, 9, 134);
+}
+
+h4, h2 {
+  outline: none;
+  text-decoration: underline;
+  background-position: center;
+  font-size: x-large;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: rgb(95, 14, 116);
+}
+
+button:link, button:visited, button:focus {
+  background: rgb(151, 18, 111);
+}
+
+button:hover {
+  background: orange;
+}
+
+button:active {
+  background: red;
+  color: white;
+}

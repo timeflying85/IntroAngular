@@ -1,0 +1,34 @@
+<!-- Ma Version
+<p></p>
+<fieldset>
+<div>
+  <input type="text" [(ngModel)]="newArticle" placeholder="New Article">
+  <button (click)="addNewArticle()">Add Article</button>
+</div>
+
+<ul>
+  <li *ngFor="let article of listShopping let i = index">{{ article }} <button (click)="deleteCurrentArticle(i)">Delete</button></li>
+</ul>
+</fieldset>
+<p></p>
+-->
+<br>
+<p></p>
+<fieldset>
+  <legend>Items</legend>
+  <table>
+    <tr>
+      <th>Nom</th>
+      <th>Quantity</th>
+    </tr>
+    <tr *ngFor="let item of items">
+      <td>{{item.name}}</td>
+      <td>{{item.quantity}}</td>
+      <td>
+        <input [id]="'input + items.indexOf(item)'" type="number" [max]="item.quantity" [(ngModel)]="quantities[items.indexOf(item)]">
+        <button [disabled]="item.quantity < quantities[items.indexOf(item)] || quantities[items.indexOf(item)] == undefined" (click)="removeItem(items.indexOf(item))">remove</button>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+

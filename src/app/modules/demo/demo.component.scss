@@ -1,0 +1,27 @@
+
+a {
+  outline: none;
+  text-decoration: none;
+  background-position: center;
+  font-size: large;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: rgb(22, 9, 134);
+}
+
+a:link, a:visited, a:focus {
+  background: rgb(39, 170, 120);
+}
+
+a:hover {
+  background: orange;
+}
+
+a:active {
+  background: red;
+  color: white;
+}

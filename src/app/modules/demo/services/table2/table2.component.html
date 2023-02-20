@@ -1,0 +1,8 @@
+
+<ul>
+  <li *ngFor="let user of users">
+    <p><span>{{user.name}}</span></p>
+    <p><span>{{user.email}}</span></p>
+    <button (click)="removeUser(users.indexOf(user))">Delete</button>
+  </li>
+</ul>
