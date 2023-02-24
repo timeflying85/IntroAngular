@@ -1,0 +1,22 @@
+
+<br>
+<div *ngIf="activeUser == undefined">
+
+  <a routerLink="/exo/auth/register">Register</a>
+  <br>
+  <a routerLink="/exo/auth/login">Login</a>
+
+
+</div>
+
+<div *ngIf="activeUser != undefined">
+
+  <p>Connected as {{activeUser.pseudo}}</p>
+  <br>
+  <button (click)="logout()">Disconnect</button>
+
+</div>
+
+
+
+<router-outlet></router-outlet>

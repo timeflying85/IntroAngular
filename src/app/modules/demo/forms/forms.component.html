@@ -1,0 +1,27 @@
+<form [formGroup]="reviewForm" (ngSubmit)="submit()">
+  <label>Note</label> &nbsp;
+
+  <select formControlName="note">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <br>
+  <label>Pseudo</label>
+  <br>
+  <input type="text" formControlName="pseudo">
+  <br>
+  <label>Commentary</label>
+  <br>
+  <textarea cols="30" rows="10" formControlName="commentary"></textarea>
+  <br>
+  <label>Recommended</label>
+  &nbsp;
+
+  <input type="checkbox" formControlName="recommended">
+  <br>
+  <button [disabled]="!reviewForm.valid">Submit</button>
+</form>

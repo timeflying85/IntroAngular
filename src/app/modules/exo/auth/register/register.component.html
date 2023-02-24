@@ -1,0 +1,21 @@
+<p>{{response}}</p>
+
+
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+  <label>Pseudo</label> &nbsp;
+  <input type="text" formControlName="pseudo">
+  <br>
+  <label>Email</label> &nbsp;
+  <input type="email" formControlName="email">
+  <br>
+  <label>Password</label> &nbsp;
+  <input type="password" formControlName="password">
+  <br>
+  <label>Password Confirmation</label> &nbsp;
+  <input type="password" formControlName="confirmationPassword">
+  <br>
+  <label>ACCEPT THE CLUF BRO</label> &nbsp;
+  <input type="checkbox" formControlName="cluf">
+  <br>
+  <button [disabled]="!registerForm.valid">Register</button>
+</form>

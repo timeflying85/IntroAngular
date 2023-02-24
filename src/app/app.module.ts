@@ -26,6 +26,12 @@ import { MainComponent } from './modules/demo/services/main/main.component';
 import { Table1Component } from './modules/demo/services/table1/table1.component';
 import { Table2Component } from './modules/demo/services/table2/table2.component';
 import { FormulairesComponent } from './modules/demo/formulaires/formulaires.component';
+import { AuthComponent } from './modules/exo/auth/auth.component';
+import { LoginComponent } from './modules/exo/auth/login/login.component';
+import { RegisterComponent } from './modules/exo/auth/register/register.component';
+import { FormsComponent } from './modules/demo/forms/forms.component';
+import { CustomDirectiveComponent } from './modules/demo/custom-directive/custom-directive.component';
+import { HoverColorDirective } from './modules/demo/custom-directive/hover-color.directive';
 
 @NgModule({
   declarations: [
@@ -51,7 +57,13 @@ import { FormulairesComponent } from './modules/demo/formulaires/formulaires.com
     MainComponent,
     Table1Component,
     Table2Component,
-    FormulairesComponent
+    FormulairesComponent,
+    AuthComponent,
+    LoginComponent,
+    RegisterComponent,
+    FormsComponent,
+    CustomDirectiveComponent,
+    HoverColorDirective
   ],
   imports: [
     BrowserModule,
